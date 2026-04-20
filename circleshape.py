@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import pygame
 
 
@@ -25,5 +23,5 @@ class CircleShape(pygame.sprite.Sprite):
         pass
 
     # two cricles collides if distance between the two is LESS than combined radius.
-    def collides_with(self, other: CircleShape):
+    def collides_with(self, other):
         return (self.radius + other.radius) > self.position.distance_to(other.position)
